@@ -15,7 +15,7 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
             <GlitchText className="text-white">Carlos Sánchez</GlitchText>
           </h1>
           <h2 className="text-2xl md:text-4xl text-purple-400 font-mono mb-6">
-            Software Engineering Student
+            Estudiante de Ingeniería de Software
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed">
             Construyendo el futuro línea por línea. Especializado en desarrollo full-stack, 

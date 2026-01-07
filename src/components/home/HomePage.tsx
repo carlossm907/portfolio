@@ -1,4 +1,5 @@
 import { Code2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { GlitchText } from '../ui/GlitchText';
 
 interface HomePageProps {
@@ -6,20 +7,22 @@ interface HomePageProps {
 }
 
 export const HomePage = ({ onNavigate }: HomePageProps) => {
+
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-4xl w-full">
         <div className="mb-8">
           <p className="text-green-400 font-mono text-sm mb-2 animate-pulse">$ carlossm907</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            <GlitchText className="text-white">Carlos Sánchez</GlitchText>
+            <GlitchText className="text-white">{t('home.title')}</GlitchText>
           </h1>
           <h2 className="text-2xl md:text-4xl text-purple-400 font-mono mb-6">
-            Estudiante de Ingeniería de Software
+            {t('home.subtitle')}
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed">
-            Construyendo el futuro línea por línea. Especializado en desarrollo full-stack, 
-            arquitecturas escalables y soluciones innovadoras con tecnologías modernas.
+            {t('home.description')}
           </p>
         </div>
 
@@ -28,13 +31,13 @@ export const HomePage = ({ onNavigate }: HomePageProps) => {
             onClick={() => onNavigate('projects')}
             className="bg-green-500 text-black px-6 py-3 font-mono font-bold hover:bg-green-400 transition-all duration-300 border-2 border-green-400 hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]"
           >
-            Ver Proyectos →
+            {t('home.viewProjects')}
           </button>
           <button
             onClick={() => onNavigate('contact')}
             className="bg-transparent text-green-400 px-6 py-3 font-mono font-bold border-2 border-green-400 hover:bg-green-400/10 transition-all duration-300"
           >
-            Contacto
+            {t('home.contactButton')}
           </button>
         </div>
 

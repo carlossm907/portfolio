@@ -7,6 +7,7 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project, index }: ProjectCardProps) => {
+
   return (
     <a
       href={project.live || project.github || '#'}

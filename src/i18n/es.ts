@@ -61,15 +61,15 @@ export const es = {
       command: '$ echo "Hablemos de negocios"',
       form: {
         name: 'Nombre',
-        email: 'Email',
         message: 'Mensaje',
         submit: 'Enviar Mensaje',
         submitted: '✓ Enviado!',
       },
       connect: 'Conecta conmigo',
-      email: 'carlos_sm90@outlook.com',
-      github: 'github.com/carlossm907',
-      linkedin: 'linkedin.com/in/carlossanchez90',
+      availability: {
+        title: 'Disponibilidad',
+        description: 'Disponible las 24 horas del dia para proyectos freelance, colaboraciones y oportunidades laborales.',
+      }
     },
 
     footer: {

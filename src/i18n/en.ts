@@ -59,15 +59,15 @@ export const en = {
       command: '$ echo "Let\'s talk about business"',
       form: {
         name: 'Name',
-        email: 'Email',
         message: 'Message',
         submit: 'Send Message',
         submitted: '✓ Sent!',
       },
       connect: 'Connect with me',
-      email: 'carlos_sm90@outlook.com',
-      github: 'github.com/carlossm907',
-      linkedin: 'linkedin.com/in/carlossanchez90',
+      availability: {
+        title: 'Availability',
+        description: 'Available 24 hours a day for freelance projects, collaborations, and job opportunities.',
+      }
     },
 
     footer: {

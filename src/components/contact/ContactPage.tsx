@@ -75,7 +75,7 @@ export const ContactPage = () => {
               
               <div className="space-y-4">
                 <a
-                  href="mailto:tu@email.com"
+                  href="mailto:carlos_sm90@outlook.com"
                   className="flex items-center text-gray-300 hover:text-green-400 transition-colors group"
                 >
                   <Mail className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />

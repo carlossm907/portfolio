@@ -73,7 +73,7 @@ export const Sidebar = ({ currentPage, onNavigate }: SidebarProps) => {
         </a>
 
         <a
-          href="https://linkedin.com/in/tuusuario"
+          href="https://linkedin.com/in/carlossanchez90"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-green-400 transition-colors"

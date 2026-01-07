@@ -1,5 +1,8 @@
 export const en = {
   translation: {
+
+    loading: 'Loading...',
+
     nav: {
       home: 'Home',
       about: 'About',

@@ -2,6 +2,8 @@ export const es = {
 
   translation: {
 
+    loading: 'Cargando...',
+
     nav: {
       home: 'Inicio',
       about: 'Sobre Mí',

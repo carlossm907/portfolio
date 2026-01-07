@@ -8,17 +8,23 @@ import {
   Linkedin,
 } from "lucide-react";
 
+import { useTranslation } from "react-i18next";
+import { LanguageSelector } from "../ui/LanguageSelector";
+
 interface SidebarProps {
   currentPage: string;
   onNavigate: (page: string) => void;
 }
 
 export const Sidebar = ({ currentPage, onNavigate }: SidebarProps) => {
-  const menuItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "about", label: "About", icon: User },
-    { id: "projects", label: "Projects", icon: Briefcase },
-    { id: "contact", label: "Contact", icon: MessageSquare },
+
+  const { t } = useTranslation();
+
+   const menuItems = [
+    { id: 'home', label: t('nav.home'), icon: Home },
+    { id: 'about', label: t('nav.about'), icon: User },
+    { id: 'projects', label: t('nav.projects'), icon: Briefcase },
+    { id: 'contact', label: t('nav.contact'), icon: MessageSquare },
   ];
 
   return (
@@ -53,7 +59,10 @@ export const Sidebar = ({ currentPage, onNavigate }: SidebarProps) => {
         })}
       </nav>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 items-center">
+
+        <LanguageSelector />
+        
         <a
           href="https://github.com/carlossm907"
           target="_blank"

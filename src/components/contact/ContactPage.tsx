@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { GlitchText } from '../ui/GlitchText';
+import { useTranslation } from 'react-i18next';
 
 export const ContactPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+
+  const { t } = useTranslation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,15 +20,15 @@ export const ContactPage = () => {
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <GlitchText className="text-white">Contacto</GlitchText>
+          <GlitchText className="text-white">{t('contact.title')}</GlitchText>
         </h1>
-        <p className="text-gray-400 font-mono mb-12">$ echo "Hablemos de negocios"</p>
+        <p className="text-gray-400 font-mono mb-12">{t('contact.command')}</p>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <div className="space-y-6">
               <div>
-                <label className="text-green-400 font-mono text-sm block mb-2">Nombre</label>
+                <label className="text-green-400 font-mono text-sm block mb-2">{t('contact.form.name')}</label>
                 <input
                   type="text"
                   value={formData.name}
@@ -47,7 +50,7 @@ export const ContactPage = () => {
               </div>
 
               <div>
-                <label className="text-green-400 font-mono text-sm block mb-2">Mensaje</label>
+                <label className="text-green-400 font-mono text-sm block mb-2">{t('contact.form.message')}</label>
                 <textarea
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -61,14 +64,14 @@ export const ContactPage = () => {
                 onClick={handleSubmit}
                 className="w-full bg-green-500 text-black px-6 py-3 font-mono font-bold hover:bg-green-400 transition-all duration-300 border-2 border-green-400 hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]"
               >
-                {submitted ? '✓ Enviado!' : 'Enviar Mensaje'}
+                {submitted ? t('contact.form.submitted') : t('contact.form.submit')}
               </button>
             </div>
           </div>
 
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-purple-900/20 to-green-900/20 p-6 border border-green-500/30">
-              <h3 className="text-green-400 font-mono text-xl mb-6">Conecta conmigo</h3>
+              <h3 className="text-green-400 font-mono text-xl mb-6">{t('contact.connect')}</h3>
               
               <div className="space-y-4">
                 <a
@@ -102,10 +105,9 @@ export const ContactPage = () => {
             </div>
 
             <div className="bg-gradient-to-br from-purple-900/20 to-green-900/20 p-6 border border-green-500/30">
-              <h3 className="text-green-400 font-mono text-xl mb-4">Disponibilidad</h3>
+              <h3 className="text-green-400 font-mono text-xl mb-4">{t('contact.availability.title')}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Disponible las 24 horas del dia para proyectos freelance, colaboraciones 
-                y oportunidades laborales.
+                {t('contact.availability.description')}
               </p>
             </div>
           </div>

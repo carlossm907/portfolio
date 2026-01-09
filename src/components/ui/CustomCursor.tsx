@@ -14,7 +14,7 @@ export const CustomCursor = () => {
 
   return (
     <div
-      className="fixed w-4 h-4 bg-green-400 rounded-full pointer-events-none z-50 mix-blend-screen transition-transform duration-150 ease-out"
+      className="fixed w-4 h-4 bg-green-400 rounded-full pointer-events-none z-50 mix-blend-screen transition-transform duration-150 ease-out hidden md:block"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

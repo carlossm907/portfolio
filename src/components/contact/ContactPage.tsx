@@ -51,8 +51,8 @@ export const ContactPage = () => {
 
         <p className="text-gray-400 font-mono mb-12">{t("contact.command")}</p>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <form onSubmit={handleSubmit} className="space-y-6 w-full">
             <div>
               <label className="text-green-400 font-mono text-sm block mb-2">
                 {t("contact.form.name")}
@@ -65,7 +65,7 @@ export const ContactPage = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full bg-black/50 border border-green-500/30 px-4 py-3 text-white focus:border-green-400 focus:outline-none font-mono"
+                className="w-full bg-black/50 border border-green-500/30 px-3 md:px-4 py-3 text-white focus:border-green-400 focus:outline-none font-mono text-sm md:text-base"
               />
             </div>
 
@@ -81,7 +81,7 @@ export const ContactPage = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full bg-black/50 border border-green-500/30 px-4 py-3 text-white focus:border-green-400 focus:outline-none font-mono"
+                className="w-full bg-black/50 border border-green-500/30 px-3 md:px-4 py-3 text-white focus:border-green-400 focus:outline-none font-mono text-sm md:text-base"
               />
             </div>
 
@@ -97,7 +97,7 @@ export const ContactPage = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full bg-black/50 border border-green-500/30 px-4 py-3 text-white focus:border-green-400 focus:outline-none font-mono resize-none"
+                className="w-full bg-black/50 border border-green-500/30 px-3 md:px-4 py-3 text-white focus:border-green-400 focus:outline-none font-mono resize-none text-sm md:text-base"
               />
             </div>
 

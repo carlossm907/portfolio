@@ -3,6 +3,9 @@ import { ProjectCard } from './ProjectCard';
 import type { Project } from '../../types/index';
 import { useTranslation } from 'react-i18next';
 import { PageLayout } from '../layout/PageLayout';
+import pumpup from '../../assets/pump-up.png';
+import foodfacts from '../../assets/food-facts.jpeg';
+import propiconnect from '../../assets/propiconnect.png';
 
 export const ProjectsPage = () => {
 
@@ -15,7 +18,7 @@ export const ProjectsPage = () => {
       description: t('projects.list.0.description'),
       tech: ['React', 'Spring Boot', 'MySQL', 'React Native', 'JWT', 'IoT'],
       github: 'https://github.com/momentum-iot',
-      image: '',
+      image: pumpup,
     },
     {
       id: 1,
@@ -23,7 +26,7 @@ export const ProjectsPage = () => {
       description: t('projects.list.1.description'),
       tech: ['Vue.js', '.NET', 'MySQL'],
       github: 'https://github.com/FoodFacts2',
-      image: '',
+      image: foodfacts,
     },
     {
       id: 2,
@@ -31,7 +34,7 @@ export const ProjectsPage = () => {
       description: t('projects.list.2.description'),
       tech: ['Angular', 'Spring Boot', 'Docker', 'MySQL'],
       github: 'https://github.com/PropiConnect',
-      image: '',
+      image: propiconnect,
     },
   ];
 

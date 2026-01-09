@@ -2,6 +2,7 @@ import { GlitchText } from '../ui/GlitchText';
 import { ProjectCard } from './ProjectCard';
 import type { Project } from '../../types/index';
 import { useTranslation } from 'react-i18next';
+import { PageLayout } from '../layout/PageLayout';
 
 export const ProjectsPage = () => {
 
@@ -35,8 +36,7 @@ export const ProjectsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <PageLayout>
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           <GlitchText className="text-white">{t('projects.title')}</GlitchText>
         </h1>
@@ -47,7 +47,6 @@ export const ProjectsPage = () => {
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
         </div>
-      </div>
-    </div>
+    </PageLayout>
   );
 };

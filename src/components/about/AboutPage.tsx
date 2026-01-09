@@ -1,14 +1,14 @@
 import { Sparkles, Cpu } from 'lucide-react';
 import { GlitchText } from '../ui/GlitchText';
 import { useTranslation } from 'react-i18next';
+import { PageLayout } from '../layout/PageLayout';
 
 export const AboutPage = () => {
 
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <PageLayout>
         <h1 className="text-4xl md:text-6xl font-bold mb-8">
           <GlitchText className="text-white">{t('about.title')}</GlitchText>
         </h1>
@@ -77,7 +77,6 @@ export const AboutPage = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+  </PageLayout>
   );
 };
